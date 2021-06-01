@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Image Name</title>
+	<link rel="stylesheet" href="./static/image.css">
+</head>
+<body>
+	<div class="header">
+		<h1>IMAGE NAME :</h1>
+		<h3>{{name}}</h3>
+		<button>
+			Back
+		</button>
+	</div>
+
+	<script>
+		btn = document.querySelector('button')
+		btn.addEventListener("click",()=>{
+			window.location.replace('/')
+		})
+	</script>
+</body>
+</html>

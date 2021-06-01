@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Image</title>
+	<link rel="stylesheet" href="./static/image.css">
+</head>
+<body>
+	<div class="header">
+		{% if name %}
+		<div class="main">
+			
+			<div>
+				<img class="image" src="{{ url_for('display_image', name=name) }}">
+				<!-- <span class="tooltiptext">Tooltip text</span> -->
+			</div>
+				<img class="large" src="{{ url_for('display_image', name=name) }}">
+		</div>
+	{% endif %}
+	<div>
+		<button>
+			<a href="/">Back</a>
+		</button>	
+	</div>
+	</div>	
+</body>
+</html>
+
+
+

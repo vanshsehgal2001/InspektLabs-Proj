@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Project</title>
+	<link rel="stylesheet" href="./static/home.css">
+</head>
+<body>
+	<h1 style="text-align:center;color:black;text-decoration:underline">
+		UPLOAD AN IMAGE 
+	</h1>
+	<div class="container">
+		<form action="/display" method="POST" enctype="multipart/form-data">
+				<div class="main">
+					<input class="inp" type="file" name="img">
+					<div class="buttons">
+						
+						<input class="sub" type="submit" name="name"  value="Show Name">
+						<input class="sub" type="submit" name="image"  value="Show Image">
+					</div>
+				</div>
+		</form>
+	</div>
+
+	{% with messages= get_flashed_messages() %}
+		{% if messages %}
+			{% for msg in messages %}
+				<p>{{msg}}!!!</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+
+</body>
+</html>

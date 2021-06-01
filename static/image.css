@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu&display=swap');
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100%;
+	background-color: lightblue;
+	font-family: 'Ubuntu', sans-serif;
+
+}
+.header{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.header ,h1 ,h3{
+	text-align: center;
+}
+
+.header h1{
+	text-decoration: underline;
+}
+
+.header h3{
+	width: 100%;
+	font-size: 30px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20px;
+    max-width: 70vw;
+    /* overflow-wrap: resize; */
+    /* border: 4px; */
+    overflow: hidden;
+    word-wrap: break-word;
+    /* white-space: pre-wrap; */
+    padding: 20px;
+}
+
+button{
+	font-size: 30px;
+	cursor: pointer;
+	background: transparent;
+	margin-top: 30px;
+	background-color: indianred;
+	box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+	border-radius: 20px;
+	border: 2px solid black;
+	transition: background-color 0.2s ease-in-out;
+}
+button:hover{
+	background-color: black;
+	color: white;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+
+p{
+	text-align: center;
+	font-size: 30px;
+	margin-top: 60px;
+}
+
+.image{
+	height:300px;
+	width: 450px;
+	max-width: 50vw;
+	max-height: 50vw;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	border-radius: 30px;
+}
+
+.large{
+	/* height: 550px;
+	width: 1000px; */
+	width: 950px;
+	height: 550px;
+	/* max-width: 100%; */
+	max-width: 80vw;
+	max-height: 90vh;
+	/* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+	border-radius: 90px;
+}
+
+
+.main .large {
+  visibility: hidden;
+  /* width: 120px; */
+  /* background-color: black; */
+  /* color: #fff; */
+  text-align: center;
+  border-radius: 6px;
+  /* padding: 5px 0; */
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+	transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.19s cubic-bezier(0.1,0.7,1,1);
+  cursor: pointer;
+}
+
+.main:hover .large ,body:hover{
+  visibility: visible;
+  opacity: 1;
+  border-radius: 30px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
