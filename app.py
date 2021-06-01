@@ -5,7 +5,7 @@ from flask_limiter.util import get_remote_address
 from werkzeug.utils import secure_filename
 import os
 import json
-# from os import environ
+
 
 #GOOGLE AUTHENTICATION IMPORTS $ SQLITE
 
@@ -19,6 +19,7 @@ from db import init_db_command
 from user import User
 
 app=Flask(__name__)
+
 
 #JWT IMPORTS $ SQLALCHEMY
 
@@ -47,6 +48,9 @@ ext_list=['jpg','png','jpeg','.tif','.tiff','.gif','.eps','.bmp']
 def check(name):
 	return '.' in name and name.rsplit('.', 1)[1].lower() in ext_list
  
+
+
+#USER MODEL(FOR JWT)
 # class User(db.Model):
 # 	id=db.Column(db.Integer,primary_key=True)
 # 	user_id=db.Column(db.String(70))
@@ -54,6 +58,9 @@ def check(name):
 # 	email=db.Column(db.String(50),unique=True,nullable=False)
 # 	password=db.Column(db.String(50),nullable=False)
 
+
+
+#*****************************************************************************#
 
 
 								# GOOGLE AUTH STUFF
@@ -170,27 +177,10 @@ def logout():
 	return redirect(url_for("index"))
 
 
+#*****************************************************************************#
 
 
-
-
-
-
-						#THROTTLE LIMIT TO API STUFF
-
-#DEFAULT DECORATOR LIMITS
-#INITIALISING A DECORATOR
-
-# limiter = Limiter(
-#     app,
-#     key_func=get_remote_address,
-#     default_limits=["200 per day", "50 per hour"]
-# )
-
-
-
-
-
+						#JWT BACKEND PART
 
 
 # @app.route('/register',methods=["POST"])
@@ -269,13 +259,14 @@ def logout():
 # 	return decorated
 
 
-
-
-
 # @app.route('/dummy')
 # @verify_token
 # def dummy(user):
 # 	return jsonify({'msg':'Hello'})
+
+
+#*****************************************************************************
+
 
 						#BASIC APP STUFF	
 
@@ -284,6 +275,19 @@ def logout():
 # @verify_token
 def home():
 	return render_template('home.html')
+
+
+
+						#THROTTLE LIMIT TO API STUFF
+
+#DEFAULT DECORATOR LIMITS
+#INITIALISING A DECORATOR
+
+# limiter = Limiter(
+#     app,
+#     key_func=get_remote_address,
+#     default_limits=["200 per day", "50 per hour"]
+# )
 
 
 
