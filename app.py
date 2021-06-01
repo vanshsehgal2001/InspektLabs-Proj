@@ -69,10 +69,10 @@ GOOGLE_DISCOVERY_URL = (
 login_manager=LoginManager()
 login_manager.init_app(app)
 
-# try:
-# 	init_db_command()
-# except sqlite3.OperationalError:
-# 	pass
+try:
+	init_db_command()
+except sqlite3.OperationalError:
+	pass
 
 client=WebApplicationClient(GOOGLE_CLIENT_ID)
 
