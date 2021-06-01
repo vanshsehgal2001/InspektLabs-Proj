@@ -106,7 +106,8 @@ def login():
 
 	request_uri = client.prepare_request_uri(
 		authorization_endpoint,
-		redirect_uri="https://127.0.0.1:5000/login/callback",
+		# redirect_uri="https://127.0.0.1:5000/login/callback",
+		redirect_uri = request.base_url + '/callback',
 		scope=["openid", "email", "profile"],
 	)
 	print(request.base_url)
