@@ -67,3 +67,26 @@ p{
 	margin-top: 60px;
 	/* transition: 0.2s ease-in-out; */
 }
+
+.btn{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: 30px;
+}
+
+.btn button{
+	background: transparent;
+	font-size: 40px;
+	background-color: aliceblue;
+	border-radius: 13px;
+	padding: 10px;
+	border: 2px solid lightblue;
+	z-index: 1.5;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
