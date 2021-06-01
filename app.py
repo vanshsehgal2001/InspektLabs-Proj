@@ -5,6 +5,7 @@ from flask_limiter.util import get_remote_address
 from werkzeug.utils import secure_filename
 import os
 import json
+# from os import environ
 
 #GOOGLE AUTHENTICATION IMPORTS $ SQLITE
 
@@ -59,6 +60,8 @@ def check(name):
 
 #GOOGLE AUTH CONFIGS
 
+# GOOGLE_CLIENT_ID=environ.get('GOOGLE_CLIENT_ID')
+# GOOGLE_CLIENT_SECRET=environ.get('GOOGLE_CLIENT_SECRET')
 
 GOOGLE_CLIENT_ID=config('GOOGLE_CLIENT_ID')
 GOOGLE_CLIENT_SECRET=config('GOOGLE_CLIENT_SECRET')
